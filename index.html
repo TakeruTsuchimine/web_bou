@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Index</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <h1 class="title">参照画面</h1>
+  </head>
+  <body>
+    <header>
+      <div class="header-1">
+        <div class="id-label">
+          <label>社員番号</label>
+          <div class="id-label-input">
+            <input type="text" name="id" placeholder="123456">
+            <input class="btn" type="submit" value="表示">
+          </div>
+        </div>
+        <div class="day-label">
+          <label>本日</label>
+          <script class="date" type="text/javascript">
+            //今日の日付データを変数に格納
+            //変数は"today"とする
+            var today = new Date();
+
+            //年・月・日・曜日を取得
+            var year = today.getFullYear();
+            var month = today.getMonth()+1;
+            var day = today.getDate();
+
+            //年・月・日を書き出す
+            document.write(year+"/"+month+"/"+day);
+          </script>
+        </div>
+      </div>
+      <br>
+      <div class="header-2">
+        <a class="a-btn" href="login.html">ログアウト</a>
+        <a class="a-btn" href="pasChange.html">パスワード変更</a>
+        <a class="a-btn" href="＃">パスワード初期化</a>
+      </div>
+    </header>
+
+    <table border="1" width="90%" align="center"> <!-- PHPを用いてDBと接続・表示 -->
+      <tr>
+        <th colspan="5">配置予定</th>
+      </tr>
+      <tr>
+        <th>日付</th>
+        <th>曜日</th>
+        <th>配置ライン</th>
+        <th>配置工程</th>
+        <th>出勤時間</th>
+      </tr>
+      <tr align="center">
+        <td>2020/3/1</td>
+        <td>(日)</td>
+        <td>ライン1</td>
+        <td>工程1</td>
+        <td>9：00</td>
+      </tr>
+      <tr align="center">
+        <td>2020/3/2</td>
+        <td>(月)</td>
+        <td>ライン1</td>
+        <td>工程2</td>
+        <td>9：00</td>
+      </tr>
+      <tr align="center">
+        <td>2020/3/3</td>
+        <td>(火)</td>
+        <td>ライン1</td>
+        <td>工程3</td>
+        <td>9：00</td>
+      </tr>
+      <tr align="center">
+        <td>2020/3/4</td>
+        <td>(水)</td>
+        <td></td>
+        <td></td>
+        <td>休</td>
+      </tr>
+      <tr align="center">
+        <td>2020/3/5</td>
+        <td>(木)</td>
+        <td></td>
+        <td></td>
+        <td>未定</td>
+      </tr>
+      <tr align="center">
+        <td>2020/3/6</td>
+        <td>(金)</td>
+        <td></td>
+        <td></td>
+        <td>未定</td>
+      </tr>
+      <tr align="center">
+        <td>2020/3/7</td>
+        <td>(土)</td>
+        <td></td>
+        <td></td>
+        <td>未定</td>
+      </tr>
+    </table>
+    <footer>
+      <div class="news">
+        <label>お知らせ</label><br>
+        <textarea name="name" rows="8" cols="40"></textarea>
+      </div>
+      <div class="contact">
+        <label>連絡事項</label><br>
+        <textarea name="name" rows="8" cols="40"></textarea>
+      </div>
+    </footer>
+  </body>
+</html>
